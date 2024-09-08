@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .message {
+            padding: 10px;
+            background-color: burlywood;
+        }
+
+        select {
+            display: none;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 15px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .loader {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            position: relative;
+            animation: rotate 1s linear infinite;
+            display: none;
+            
+        }
+
+        .loader::before {
+            content: "";
+            box-sizing: border-box;
+            position: absolute;
+            inset: 0px;
+            border-radius: 50%;
+            border: 5px solid #FFF;
+            animation: prixClipFix 2s linear infinite ;
+        }
+
+        @keyframes rotate {
+            100%   {transform: rotate(360deg)}
+        }
+
+        @keyframes prixClipFix {
+            0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+            25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+            50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+            75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+            100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="message">
+            <div class="text">
+                Нажми кнопку, и тут появится выпадающий список
+            </div>
+            <div class="loader"></div>
+        </div>
+        <select></select>
+    </div>
+
+    <button>Загрузить данные</button>
+
+    <script>
+
+        function _0x5642(_0x3467d8,_0x49e35f){const _0x4c28b6=_0x4c28();return _0x5642=function(_0x564233,_0x2d5127){_0x564233=_0x564233-0x196;let _0x42e662=_0x4c28b6[_0x564233];return _0x42e662;},_0x5642(_0x3467d8,_0x49e35f);}const _0x187799=_0x5642;(function(_0x3eb040,_0x40cb03){const _0x5a1df1=_0x5642,_0x218d50=_0x3eb040();while(!![]){try{const _0x5b9f8e=-parseInt(_0x5a1df1(0x1b3))/0x1*(-parseInt(_0x5a1df1(0x1ab))/0x2)+-parseInt(_0x5a1df1(0x1a4))/0x3+-parseInt(_0x5a1df1(0x1ac))/0x4*(parseInt(_0x5a1df1(0x1a0))/0x5)+parseInt(_0x5a1df1(0x1b1))/0x6*(parseInt(_0x5a1df1(0x1a1))/0x7)+-parseInt(_0x5a1df1(0x196))/0x8+-parseInt(_0x5a1df1(0x1a9))/0x9*(-parseInt(_0x5a1df1(0x199))/0xa)+-parseInt(_0x5a1df1(0x198))/0xb;if(_0x5b9f8e===_0x40cb03)break;else _0x218d50['push'](_0x218d50['shift']());}catch(_0x3e8420){_0x218d50['push'](_0x218d50['shift']());}}}(_0x4c28,0x4e6bf));const button=document[_0x187799(0x1ae)]('button'),loadData=()=>{const _0x12094b=_0x187799,_0x4c4078=[{'value':0x1,'text':_0x12094b(0x19a)},{'value':0x2,'text':_0x12094b(0x1a3),'selected':![]},{'value':0x3,'text':_0x12094b(0x1b0),'selected':!![]}],_0x1d0d58=document[_0x12094b(0x1ae)](_0x12094b(0x1a7));for(let _0x2346f2 in _0x4c4078){const _0x1287b7=_0x4c4078[_0x2346f2],_0xd638f5=document[_0x12094b(0x1ad)](_0x12094b(0x1a5));_0xd638f5[_0x12094b(0x19b)]=_0x1287b7[_0x12094b(0x19b)],_0xd638f5['textContent']=_0x1287b7[_0x12094b(0x1af)],_0x1287b7[_0x12094b(0x1a6)]&&(_0xd638f5['selected']=!![]),_0x1d0d58[_0x12094b(0x197)](_0xd638f5);}const _0x519b67=document['querySelector'](_0x12094b(0x1b2)),_0x386f3e=document[_0x12094b(0x1ae)](_0x12094b(0x1a8)),_0x2df030=document[_0x12094b(0x1ae)]('.message');_0x519b67[_0x12094b(0x19c)][_0x12094b(0x1aa)]=_0x12094b(0x1a2),_0x386f3e[_0x12094b(0x19c)][_0x12094b(0x1aa)]='none',button[_0x12094b(0x19c)][_0x12094b(0x1aa)]=_0x12094b(0x19e),setTimeout(()=>{const _0x2fb74a=_0x12094b;_0x519b67[_0x2fb74a(0x19c)][_0x2fb74a(0x1aa)]=_0x2fb74a(0x19e),_0x2df030['style'][_0x2fb74a(0x1aa)]=_0x2fb74a(0x19e),_0x1d0d58[_0x2fb74a(0x19c)][_0x2fb74a(0x1aa)]=_0x2fb74a(0x1a2);},0x7d0);};function _0x4c28(){const _0x50f362=['block','two','9210xoTzmI','option','selected','select','.text','36dzXfWX','display','41222CtZPDH','32UBoxOZ','createElement','querySelector','text','three','6JCnNVC','.loader','4JNJYXv','409968oAWVqm','appendChild','1455014WJCsES','1391820mocJzd','one','value','style','addEventListener','none','click','210695jNVeuV','1440215sSAokD'];_0x4c28=function(){return _0x50f362;};return _0x4c28();}button[_0x187799(0x19d)](_0x187799(0x19f),()=>{loadData();});
+        
+    </script>
+</body>
+</html>
